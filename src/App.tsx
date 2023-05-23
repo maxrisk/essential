@@ -1,12 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <h1>Hello world</h1>
+        <h2>Hello world</h2>
+        <h3>Hello world</h3>
+        <code>
+          const a = b
+        </code>
         <p>
           Edit
           <code>src/App.tsx</code>
