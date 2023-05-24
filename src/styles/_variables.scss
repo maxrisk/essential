@@ -66,3 +66,27 @@ $light-background: $white !default;
 $body-bg:          $light-background !default;
 $body-color:       $gray-900 !default;
 $body-text-align:  null !default;
+$btn-disabled-opacity: 0.5;
+
+// button
+$btn-padding-x: 2rem;
+$btn-padding-y: 0.625rem;
+$btn-radius: 0.3125rem;
+$btn-font-size: 0.875rem;
+$btn-height: 2.5rem;
+$btn-line-height: 1rem;
+$btn-outline-size: 0.1875rem;
+
+// button sm
+$btn-padding-x-sm: 1.25rem;
+$btn-padding-y-sm: 0.3125rem;
+$btn-font-size-sm: 0.875rem;
+$btn-height-sm: 1.875rem;
+$btn-line-height-sm: 1rem;
+
+// button lg
+$btn-padding-x-lg: 1.5rem;
+$btn-padding-y-lg: 0.625rem;
+$btn-font-size-lg: 1.5rem;
+$btn-height-lg: 3.75rem;
+$btn-line-height-lg: 2rem;

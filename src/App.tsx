@@ -1,15 +1,20 @@
 import React from 'react';
+import Button from './components/Button/button';
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Hello world</h1>
-        <h2>Hello world</h2>
-        <h3>Hello world</h3>
-        <code>
-          const a = b
-        </code>
+      <div className="App-header">
+        <Button>确定</Button>
+        <Button disabled onClick={() => console.log(123)}>Button</Button>
+        <Button round>Button</Button>
+        <Button size="sm">确定</Button>
+        <Button size="lg">确定</Button>
+        <Button btnType="primary">确定</Button>
+        <Button btnType="primary" disabled>确定</Button>
+        <Button btnType="danger">确定</Button>
+
         <p>
           Edit
           <code>src/App.tsx</code>
@@ -23,7 +28,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </div>
     </div>
   );
 }

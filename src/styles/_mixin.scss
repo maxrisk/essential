@@ -1,0 +1,28 @@
+@mixin button-size($height, $padding-y, $padding-x, $font-size, $line-height) {
+  height: $height;
+  padding: $padding-y $padding-x;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin button-style(
+  $background,
+  $border,
+  $color,
+  $hover-background: lighten($background, 10%),
+  $hover-border: lighten($border, 5%),
+  $hover-color: $color,
+) {
+  background: $background;
+  border-color: $border;
+  color: $color;
+
+  &:hover {
+    background: $hover-background;
+    border-color: $hover-border;
+  }
+
+  &:focus {
+    outline: lighten($background, 30%) solid 3px;
+  };
+}

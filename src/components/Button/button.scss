@@ -1,0 +1,45 @@
+.btn {
+  height: $btn-height;
+  box-sizing: border-box;
+  border: 1px solid $primary;
+  border-radius: $btn-radius;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.0125rem;
+  transition: background ease-in-out 0.2s;
+  @include button-size($btn-height, $btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height);
+  @include button-style(transparent, $primary, $primary, lighten($primary, 40%));
+
+  &:disabled:hover,
+  &.disabled:hover,
+  &:disabled,
+  &.disabled {
+    opacity: $btn-disabled-opacity;
+    cursor: not-allowed;
+  }
+
+  &.round {
+    border-radius: 2.3125rem;
+  }
+
+  &.circle {
+    border-radius: 50%;
+  }
+}
+
+.btn-primary {
+  @include button-style($primary, $primary, $white);
+}
+
+.btn-danger {
+  @include button-style($danger, $danger, $white);
+}
+
+.btn-sm {
+  @include button-size($btn-height-sm, $btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm);
+}
+
+.btn-lg {
+  @include button-size($btn-height-lg, $btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg);
+}
+
+
