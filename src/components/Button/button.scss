@@ -26,12 +26,16 @@
   }
 }
 
-.btn-primary {
-  @include button-style($primary, $primary, $white);
+.btn-default {
+  @include button-style(transparent, $primary, $primary);
 }
 
 .btn-danger {
   @include button-style($danger, $danger, $white);
+}
+
+.btn-primary {
+  @include button-style($primary, $primary, $white);
 }
 
 .btn-sm {

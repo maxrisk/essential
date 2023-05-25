@@ -12,7 +12,7 @@ function App() {
         <Button round>Button</Button>
         <Button size="sm">确定</Button>
         <Button size="lg">确定</Button>
-        <Button btnType="primary">确定</Button>
+        <Button btnType="primary" size="lg" className="tclass">确定</Button>
         <Button btnType="primary" disabled>确定</Button>
         <Button btnType="danger">确定</Button>
       </div>

@@ -3,12 +3,11 @@ import classNames from 'classnames';
 
 export type ButtonSize = 'sm' | 'lg';
 
-export type ButtonType = 'primary' | 'danger';
+export type ButtonType = 'default' | 'primary' | 'danger';
 
 export interface BaseButtonProps {
   size?: ButtonSize;
   btnType?: ButtonType;
-  children: React.ReactNode;
   round?: boolean;
   circle?: boolean;
 }
@@ -17,7 +16,7 @@ export type ButtonProps =
   & React.ButtonHTMLAttributes<HTMLElement>
   & BaseButtonProps;
 
-function Button(props: ButtonProps) {
+const Button: React.FC<ButtonProps> = (props) => {
   const {
     btnType,
     className,
@@ -35,14 +34,17 @@ function Button(props: ButtonProps) {
     round,
     circle,
     disabled,
-    className,
-  });
+  }, className);
 
   return (
     <button className={classes} disabled={disabled} type="button" {...rest}>
       {children}
     </button>
   );
-}
+};
 
 export default Button;
+
+Button.defaultProps = {
+  btnType: 'default',
+};
