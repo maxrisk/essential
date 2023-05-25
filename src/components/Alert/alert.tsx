@@ -5,7 +5,7 @@ export type AlertType = 'warning' | 'danger' | 'success' | 'info';
 
 interface AlertProps {
   title: string;
-  type: AlertType;
+  type?: AlertType;
 }
 
 const Alert: React.FC<AlertProps> = (props) => {
@@ -25,11 +25,11 @@ const Alert: React.FC<AlertProps> = (props) => {
 
   return (
     <div className={classes}>
-      <svg className="icon" aria-hidden="true">
+      <svg className="icon" aria-hidden="true" data-testid="alert-icon">
         <use xlinkHref={`#icon-${type}`} />
       </svg>
       <span className="alert-title">{title}</span>
-      <button onClick={handleClose} type="button" className="alert-close-btn">
+      <button onClick={handleClose} type="button" className="alert-close-btn" data-testid="close-btn">
         <svg className="icon icon-close" aria-hidden="true">
           <use xlinkHref="#icon-close" />
         </svg>
@@ -39,3 +39,7 @@ const Alert: React.FC<AlertProps> = (props) => {
 };
 
 export default Alert;
+
+Alert.defaultProps = {
+  type: 'info',
+};
