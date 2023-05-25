@@ -7,5 +7,9 @@
 // mixin
 @import 'mixin';
 
+// common
+@import 'common';
+
 // components
 @import '../components/Button/button';
+@import '../components/Alert/alert';

@@ -26,3 +26,9 @@
     outline: lighten($background, 30%) solid 3px;
   };
 }
+
+@mixin alert-style($color) {
+  border-color: $color;
+  color: $color;
+}
+

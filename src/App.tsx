@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from './components/Button/button';
 import './App.css';
+import Alert from './components/Alert/alert';
 
 function App() {
   return (
@@ -14,20 +15,13 @@ function App() {
         <Button btnType="primary">确定</Button>
         <Button btnType="primary" disabled>确定</Button>
         <Button btnType="danger">确定</Button>
+      </div>
 
-        <p>
-          Edit
-          <code>src/App.tsx</code>
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <div className="App-header vertical">
+        <Alert type="info" title="欢迎使用" />
+        <Alert type="danger" title="出现了错误" />
+        <Alert type="warning" title="不能这样操作哦" />
+        <Alert type="success" title="操作成功" />
       </div>
     </div>
   );
