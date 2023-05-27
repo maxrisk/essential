@@ -1,0 +1,54 @@
+.tabs {
+  &-navs {
+    padding: 0 10px;
+    border-spacing: -10px;
+
+    .navs-item {
+      color: $secondary2;
+      background-color: transparent;
+      border: none;
+      font-size: $font-size-lg;
+      padding: $tabs-navs-item-y $tabs-navs-item-x;
+      
+      &.disabled,
+      &:disabled {
+        opacity: 0.5;
+      }
+    }
+
+    &-card {
+      .navs-item {
+        border: 1px transparent solid;
+        border-bottom: 1px $tabs-navs-bottom-line solid;
+
+        &__active {
+          color: $primary;
+          border: 1px $tabs-navs-bottom-line solid;
+          border-bottom: 1px transparent solid;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+        }
+      }
+    }
+
+    &-line {
+      .tabs-navs {
+        border-bottom: 1px solid $tabs-navs-bottom-line;
+      }
+
+      .navs-item {
+        border-bottom: 3px transparent solid;
+
+        &__active {
+          color: $primary;
+          font-weight: $font-weight-bold;
+          border-bottom: 3px $primary solid;
+        }
+      }
+    }
+  }
+
+  &-item {
+    padding: $tabs-item-y $tabs-item-x;
+  }
+}

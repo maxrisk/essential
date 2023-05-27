@@ -2,6 +2,8 @@ import React from 'react';
 import Button from './components/Button/button';
 import './App.css';
 import Alert from './components/Alert/alert';
+import Tabs from './components/Tabs/tabs';
+import TabItem from './components/Tabs/tabItem';
 
 function App() {
   return (
@@ -22,6 +24,19 @@ function App() {
         <Alert type="danger" title="出现了错误" />
         <Alert type="warning" title="不能这样操作哦" />
         <Alert type="success" title="操作成功" />
+      </div>
+
+      <div className="App-header">
+        <Tabs defaultIndex={1} type="card">
+          <TabItem label="左一">333</TabItem>
+          <TabItem label="左2">222</TabItem>
+          <TabItem label="左3" disabled>222</TabItem>
+        </Tabs>
+        <Tabs>
+          <TabItem label="左一">333</TabItem>
+          <TabItem label="左2">222</TabItem>
+          <TabItem label="左3" disabled>222</TabItem>
+        </Tabs>
       </div>
     </div>
   );
