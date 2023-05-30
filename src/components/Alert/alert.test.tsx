@@ -7,10 +7,7 @@ describe('test Alert button', () => {
     const wrapper = render(<Alert title="This is default alert" />);
     const element = wrapper.getByText('This is default alert');
     expect(element).toBeInTheDocument();
-    expect(element.parentElement).toHaveClass('alert alert-info');
-
-    const iconElement = wrapper.getByTestId('alert-icon');
-    expect(iconElement).toBeInTheDocument();
+    expect(element.parentElement).toHaveClass('alert alert-primary');
 
     const closeBtnElement = wrapper.getByTestId('close-btn');
     fireEvent.click(closeBtnElement);

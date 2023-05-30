@@ -8,12 +8,10 @@
   min-width: 43.75rem;
   box-shadow: 0 13px 19px rgba($color: #000, $alpha: 0.07);
   .icon {
-    width: 1.2rem;
-    height: 1.2rem;
     margin-right: 0.5rem;
   }
 
-  &-info {
+  &-primary {
     @include alert-style($primary);
   }
 

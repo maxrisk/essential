@@ -1,9 +1,11 @@
 import React from 'react';
+import { faBan, faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 import Button from './components/Button/button';
 import './App.css';
 import Alert from './components/Alert/alert';
 import Tabs from './components/Tabs/tabs';
 import TabItem from './components/Tabs/tabItem';
+import Icon from './components/Icon/icon';
 
 function App() {
   return (
@@ -20,7 +22,7 @@ function App() {
       </div>
 
       <div className="App-header vertical">
-        <Alert type="info" title="欢迎使用" />
+        <Alert type="primary" title="欢迎使用" />
         <Alert type="danger" title="出现了错误" />
         <Alert type="warning" title="不能这样操作哦" />
         <Alert type="success" title="操作成功" />
@@ -37,6 +39,11 @@ function App() {
           <TabItem label="左2">222</TabItem>
           <TabItem label="左3" disabled>222</TabItem>
         </Tabs>
+      </div>
+
+      <div>
+        <Icon icon={faCircleInfo} theme="danger" size="xl" />
+        <Icon icon={faBan} />
       </div>
     </div>
   );

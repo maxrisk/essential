@@ -1,7 +1,16 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
+import {
+  faBan,
+  faBell,
+  faCircleCheck,
+  faCircleExclamation,
+  faCircleXmark,
+  IconDefinition,
+} from '@fortawesome/free-solid-svg-icons';
+import Icon from '../Icon/icon';
 
-export type AlertType = 'warning' | 'danger' | 'success' | 'info';
+export type AlertType = 'warning' | 'danger' | 'success' | 'primary';
 
 interface AlertProps {
   title: string;
@@ -9,7 +18,7 @@ interface AlertProps {
 }
 
 const Alert: React.FC<AlertProps> = (props) => {
-  const { title, type } = props;
+  const { title, type = 'primary' } = props;
   const [visible, setVisible] = useState(true);
   const handleClose = () => {
     setVisible(false);
@@ -19,27 +28,31 @@ const Alert: React.FC<AlertProps> = (props) => {
     [`alert-${type}`]: type,
   });
 
+  const iconMap: Record<AlertType, IconDefinition> = {
+    danger: faBan,
+    warning: faCircleExclamation,
+    success: faCircleCheck,
+    primary: faBell,
+  };
+
   if (!visible) {
     return null;
   }
 
   return (
     <div className={classes}>
-      <svg className="icon" aria-hidden="true" data-testid="alert-icon">
-        <use xlinkHref={`#icon-${type}`} />
-      </svg>
+      <Icon icon={iconMap[type]} theme={type} size="lg" className="icon" />
       <span className="alert-title">{title}</span>
-      <button onClick={handleClose} type="button" className="alert-close-btn" data-testid="close-btn">
-        <svg className="icon icon-close" aria-hidden="true">
-          <use xlinkHref="#icon-close" />
-        </svg>
+      <button
+        onClick={handleClose}
+        type="button"
+        className="alert-close-btn"
+        data-testid="close-btn"
+      >
+        <Icon icon={faCircleXmark} size="lg" />
       </button>
     </div>
   );
 };
 
 export default Alert;
-
-Alert.defaultProps = {
-  type: 'info',
-};
