@@ -32,3 +32,30 @@
   color: $color;
 }
 
+@mixin zoom-in(
+  $direction: 'top',
+  $scaleStart: scaleY(0.5),
+  $scaleEnd: scaleY(1),
+  $origin: center top,
+) {
+  .zoom-in-#{$direction}-enter {
+    opacity: 0.5;
+    transform: $scaleStart;
+  }
+  .zoom-in-#{$direction}-enter-active {
+    opacity: 1;
+    transform: $scaleEnd;
+    transition: transform 300ms, opacity 300ms;
+    transform-origin: $origin;
+  }
+  .zoom-in-#{$direction}-exit {
+    opacity: 1;
+    transform: $scaleEnd;
+  }
+  .zoom-in-#{$direction}-exit-active {
+    opacity: 0;
+    transform: $scaleStart;
+    transform-origin: $origin;
+    transition: transform 300ms, opacity 300ms;
+  }
+}

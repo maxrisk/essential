@@ -1,0 +1,4 @@
+@include zoom-in('top');
+@include zoom-in('left', scaleX(0), scaleX(1), center left);
+@include zoom-in('right', scaleX(0), scaleX(1), center right);
+@include zoom-in('bottom', scaleY(0.5), scaleY(1), center bottom);
