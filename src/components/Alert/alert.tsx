@@ -9,7 +9,7 @@ import {
   IconDefinition,
 } from '@fortawesome/free-solid-svg-icons';
 import Transition from '../Transition/transition';
-import Icon from '../Icon/icon';
+import { Icon } from '../Icon/icon';
 
 export type AlertType = 'warning' | 'danger' | 'success' | 'primary';
 

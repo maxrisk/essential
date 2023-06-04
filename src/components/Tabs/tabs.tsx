@@ -9,7 +9,7 @@ export type TabsProps = {
   type?: 'line' | 'card';
 };
 
-const Tabs: React.FC<TabsProps> = (props) => {
+export const Tabs: React.FC<TabsProps> = (props) => {
   const {
     defaultIndex, onSelect, children, type,
   } = props;
@@ -21,9 +21,7 @@ const Tabs: React.FC<TabsProps> = (props) => {
   });
 
   const renderNavLinks = Children.map(children, (child, index) => {
-    const childElement = child as React.FunctionComponentElement<
-    TabItemProps
-    >;
+    const childElement = child as React.FunctionComponentElement<TabItemProps>;
     if (childElement.type.displayName !== 'TabItem') {
       throw new Error("Tabs's children must be TabItem");
     }
@@ -59,9 +57,7 @@ const Tabs: React.FC<TabsProps> = (props) => {
 
   return (
     <div className={classes}>
-      <div className="tabs-navs">
-        {renderNavLinks}
-      </div>
+      <div className="tabs-navs">{renderNavLinks}</div>
 
       {renderPanel}
     </div>

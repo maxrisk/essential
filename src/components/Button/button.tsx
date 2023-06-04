@@ -16,7 +16,7 @@ export type ButtonProps =
   & React.ButtonHTMLAttributes<HTMLElement>
   & BaseButtonProps;
 
-const Button: React.FC<ButtonProps> = (props) => {
+export const Button: React.FC<ButtonProps> = (props) => {
   const {
     btnType,
     className,

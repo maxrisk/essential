@@ -7,7 +7,8 @@
     "react/function-component-definition": [2, {
       "namedComponents": [ "function-expression", "function-declaration", "arrow-function" ]
     }],
-    "react/no-unused-prop-types": [0]
+    "react/no-unused-prop-types": [0],
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
   },
   "parserOptions": {
     "project": "./tsconfig.json"
