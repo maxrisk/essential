@@ -1,20 +1,21 @@
 // config
-@import 'variables';
+@import "variables";
 
 // layout
-@import 'reboot';
+@import "reboot";
 
 // mixin
-@import 'mixin';
+@import "mixin";
 
 // common
-@import 'common';
+@import "common";
 
 // animation
-@import 'animations';
+@import "animations";
 
 // components
-@import '../components/Button/button';
-@import '../components/Alert/alert';
-@import '../components/Tabs/tabs';
-@import '../components/Icon/icon';
+@import "../components/Button/button";
+@import "../components/Alert/alert";
+@import "../components/Tabs/tabs";
+@import "../components/Icon/icon";
+@import "../components/Input/input";

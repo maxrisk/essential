@@ -23,6 +23,8 @@ $success:   #2dc071 !default;
 $warning:    #E77C40 !default;
 $danger:   #e74040 !default;
 
+$secondary-text: #737373 !default;
+
 $theme-colors: (
   'primary': $primary,
   'mute': $mute,
@@ -110,3 +112,11 @@ $tabs-navs-bottom-line: $gray-200;
 $tabs-item-x: 0.5rem;
 $tabs-item-y: 1rem;
 
+// input
+$input-height: 3.125rem;
+$input-border: 1px #e6e6e6 solid;
+$input-border-radius: 5px;
+$input-padding-y: 0;
+$input-padding-x: 1rem;
+$input-font-size: 1rem;
+$input-outline-color: lighten($primary, 25%);

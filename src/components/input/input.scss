@@ -1,0 +1,60 @@
+.es-input-wrapper {
+  display: flex;
+  align-items: center;
+
+  &:has(.es-input-success) {
+    border-color: $success;
+  }
+
+  &:has(.es-input-fail) {
+    border-color: $danger;
+  }
+}
+
+.es-input {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  background-color: transparent;
+  padding: $input-padding-y $input-padding-x;
+
+  &-affix-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    height: $input-height;
+    border: $input-border;
+    border-radius: $input-border-radius;
+    box-sizing: border-box;
+    transition: outline 100ms ease-in, border-color 200ms;
+
+    &:not(:last-child) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:focus-within {
+      outline: 2px solid $input-outline-color;
+      border-color: $primary;
+    }
+  }
+  
+  &:focus-visible {
+    outline: none;
+  }
+
+  &-prefix {
+    margin-left: $input-padding-x;
+    color: $secondary-text;
+  }
+
+  &::placeholder {
+    color: $secondary-text;
+  }
+}
+
+.es-search-button {
+  height: $input-height;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
