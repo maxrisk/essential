@@ -1,9 +1,9 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, waitFor } from '@testing-library/react';
 import Alert from './alert';
 
 describe('test Alert button', () => {
-  it('should render default Alert', () => {
+  it('should render default Alert', async () => {
     const wrapper = render(<Alert title="This is default alert" />);
     const element = wrapper.getByText('This is default alert');
     expect(element).toBeInTheDocument();
@@ -11,7 +11,9 @@ describe('test Alert button', () => {
 
     const closeBtnElement = wrapper.getByTestId('close-btn');
     fireEvent.click(closeBtnElement);
-    expect(element.parentElement).not.toBeInTheDocument();
+    await waitFor(() => {
+      expect(element.parentElement).not.toBeInTheDocument();
+    });
   });
 
   it('should render different type alert', () => {
