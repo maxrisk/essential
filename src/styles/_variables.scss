@@ -120,3 +120,9 @@ $input-padding-y: 0;
 $input-padding-x: 1rem;
 $input-font-size: 1rem;
 $input-outline-color: lighten($primary, 25%);
+
+// auto complete
+$autocomplete-padding-x: 1rem;
+$autocomplete-padding-y: 0.5rem;
+$autocomplete-radius: 0.2rem;
+$autocomplete-shadow: 0 4px 30px -5px rgba(0, 0, 0, 0.2);

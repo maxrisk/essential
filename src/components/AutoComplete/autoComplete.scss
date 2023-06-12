@@ -1,0 +1,37 @@
+.es-auto-complete {
+  position: relative;
+
+  &-options {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.2rem;
+    border-radius: $autocomplete-radius;
+    box-shadow: $autocomplete-shadow;
+    overflow: hidden;
+
+    &-item {
+      padding: $autocomplete-padding-y $autocomplete-padding-x;
+      background-color: $light-background;
+
+      &:hover {
+        background-color: darken($light-background, 10%);
+      }
+    }
+  }
+
+  .item-highlight {
+    background-color: darken($light-background, 10%);
+  }
+}
+
+.es-auto-complete-panel {
+  position: absolute;
+  top: $input-height;
+  left: 0;
+  right: 0;
+}
+
+.es-auto-complete-loading {
+  padding: $autocomplete-padding-y $autocomplete-padding-x;
+  text-align: center;
+}
