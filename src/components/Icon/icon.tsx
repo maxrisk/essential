@@ -9,10 +9,10 @@ export type IconProps = {
 } & FontAwesomeIconProps;
 
 export const Icon: React.FC<IconProps> = (props) => {
-  const { theme, ...rest } = props;
+  const { theme, className, ...rest } = props;
   const classes = classNames({
     [`icon-${theme}`]: theme,
-  });
+  }, className);
 
   return <FontAwesomeIcon className={classes} {...rest} />;
 };
