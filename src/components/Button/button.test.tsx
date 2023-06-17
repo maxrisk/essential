@@ -1,6 +1,8 @@
 import React from 'react';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import { fireEvent, render } from '@testing-library/react';
-import Button, { ButtonProps } from './button';
+import { Button, ButtonProps } from './button';
+import Icon from '../Icon';
 
 const defaultProps = {
   onClick: jest.fn(),
@@ -41,5 +43,10 @@ describe('test Button component', () => {
     expect(element).toBeInTheDocument();
     fireEvent.click(element);
     expect(disabledProps.onClick).not.toHaveBeenCalled();
+  });
+
+  it('should render button with icon', () => {
+    const { getByTestId } = render(<Button icon={<Icon icon={faDownload} data-testid="test-btn-icon" />}>上传文件</Button>);
+    expect(getByTestId('test-btn-icon')).toBeInTheDocument();
   });
 });

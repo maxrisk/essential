@@ -10,6 +10,7 @@ export interface BaseButtonProps {
   btnType?: ButtonType;
   round?: boolean;
   circle?: boolean;
+  icon?: React.ReactNode;
 }
 
 export type ButtonProps =
@@ -25,6 +26,7 @@ export const Button: React.FC<ButtonProps> = (props) => {
     size,
     round,
     circle,
+    icon,
     ...rest
   } = props;
 
@@ -38,6 +40,11 @@ export const Button: React.FC<ButtonProps> = (props) => {
 
   return (
     <button className={classes} disabled={disabled} type="button" {...rest}>
+      {icon && (
+        <span className="btn-icon">
+          {icon}
+        </span>
+      )}
       {children}
     </button>
   );

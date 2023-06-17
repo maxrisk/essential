@@ -1,5 +1,8 @@
+import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import { Button } from './button';
+import Icon from '../Icon';
 
 const meta = {
   title: 'Button',
@@ -51,5 +54,13 @@ export const Round: Story = {
     btnType: 'primary',
     round: true,
     children: 'Button',
+  },
+};
+
+export const IconButton: Story = {
+  args: {
+    btnType: 'default',
+    icon: <Icon icon={faDownload} />,
+    children: '上传文件',
   },
 };
