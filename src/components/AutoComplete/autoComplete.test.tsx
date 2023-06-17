@@ -134,6 +134,5 @@ describe('test AutoComplete component', () => {
     await waitFor(() => {
       expect(wrapper3.getByText('112233')).toBeInTheDocument();
     });
-    wrapper3.debug();
   });
 });
