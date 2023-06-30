@@ -10,7 +10,7 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black:    #000000 !default;
 
-$blue: #23a6f0 !default;
+$blue:  #23a6f0 !default;
 $green: #40bb15 !default;
 
 $primary:    $blue !default;
@@ -19,8 +19,8 @@ $secondary2: $gray-800 !default;
 
 $disabled: #2a7cc7 !default;
 $mute:     #bdbdbd !default;
-$success:   #2dc071 !default;
-$warning:    #E77C40 !default;
+$success:  #2dc071 !default;
+$warning:  #E77C40 !default;
 $danger:   #e74040 !default;
 
 $secondary-text: #737373 !default;
@@ -76,53 +76,63 @@ $light-background: $white !default;
 $body-bg:          $light-background !default;
 $body-color:       $gray-900 !default;
 $body-text-align:  null !default;
-$btn-disabled-opacity: 0.5;
+$btn-disabled-opacity: 0.5 !default;
 
 // button
-$btn-padding-x: 2rem;
-$btn-padding-y: 0.625rem;
-$btn-radius: 0.3125rem;
-$btn-font-size: 0.875rem;
-$btn-height: 2.5rem;
-$btn-line-height: 1rem;
-$btn-outline-size: 0.1875rem;
+$btn-padding-x: 2rem !default;
+$btn-padding-y: 0.625rem !default;
+$btn-radius: 0.3125rem !default;
+$btn-font-size: 0.875rem !default;
+$btn-height: 2.5rem !default;
+$btn-line-height: 1rem !default;
+$btn-outline-size: 0.1875rem !default;
 
 // button sm
-$btn-padding-x-sm: 1.25rem;
-$btn-padding-y-sm: 0.3125rem;
-$btn-font-size-sm: 0.875rem;
-$btn-height-sm: 1.875rem;
-$btn-line-height-sm: 1rem;
+$btn-padding-x-sm: 1.25rem !default;
+$btn-padding-y-sm: 0.3125rem !default;
+$btn-font-size-sm: 0.875rem !default;
+$btn-height-sm: 1.875rem !default;
+$btn-line-height-sm: 1rem !default;
 
 // button lg
-$btn-padding-x-lg: 1.5rem;
-$btn-padding-y-lg: 0.625rem;
-$btn-font-size-lg: 1.5rem;
-$btn-height-lg: 3.75rem;
-$btn-line-height-lg: 2rem;
+$btn-padding-x-lg: 1.5rem !default;
+$btn-padding-y-lg: 0.625rem !default;
+$btn-font-size-lg: 1.5rem !default;
+$btn-height-lg: 3.75rem !default;
+$btn-line-height-lg: 2rem !default;
 
 // alert
-$alert-padding-x: 1.5rem;
-$alert-padding-y: 1.5rem;
+$alert-padding-x: 1.5rem !default;
+$alert-padding-y: 1.5rem !default;
 
 // tabs
-$tabs-navs-item-x: 1.5rem;
-$tabs-navs-item-y: 0.5rem;
-$tabs-navs-bottom-line: $gray-200;
-$tabs-item-x: 0.5rem;
-$tabs-item-y: 1rem;
+$tabs-navs-item-x: 1.5rem !default;
+$tabs-navs-item-y: 0.5rem !default;
+$tabs-navs-bottom-line: $gray-200 !default;
+$tabs-item-x: 0.5rem !default;
+$tabs-item-y: 1rem !default;
 
 // input
-$input-height: 3.125rem;
-$input-border: 1px #e6e6e6 solid;
-$input-border-radius: 5px;
-$input-padding-y: 0;
-$input-padding-x: 1rem;
-$input-font-size: 1rem;
-$input-outline-color: lighten($primary, 25%);
+$input-height: 3.125rem !default;
+$input-border: 1px #e6e6e6 solid !default;
+$input-border-radius: 5px !default;
+$input-padding-y: 0 !default;
+$input-padding-x: 1rem !default;
+$input-font-size: 1rem !default;
+$input-outline-color: lighten($primary, 25%) !default;
 
 // auto complete
-$autocomplete-padding-x: 1rem;
-$autocomplete-padding-y: 0.5rem;
-$autocomplete-radius: 0.2rem;
-$autocomplete-shadow: 0 4px 30px -5px rgba(0, 0, 0, 0.2);
+$autocomplete-padding-x: 1rem !default;
+$autocomplete-padding-y: 0.5rem !default;
+$autocomplete-radius: 0.2rem !default;
+$autocomplete-shadow: 0 4px 30px -5px rgba(0, 0, 0, 0.2) !default;
+
+// upload
+$upload-item-radius: 0.25rem !default;
+$upload-item-font-size: 0.8rem !default;
+$upload-item-padding: 0.5rem 1rem !default;
+
+// progress bar
+$progress-bar-height: 20px !default;
+$progress-bar-radius: 4px !default;
+$progress-bar-transition: width ease-in 300ms !default;

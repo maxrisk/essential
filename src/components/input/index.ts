@@ -1,5 +1,5 @@
 import { Input as InternalInput, InputProps } from './input';
-import Search from './search';
+import { Search } from './search';
 
 export type { InputProps } from './input';
 

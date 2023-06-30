@@ -15,8 +15,10 @@
       }
     ],
     "react/no-unused-prop-types": [0],
-    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
-    "import/no-named-as-default": "off"
+    "import/no-extraneous-dependencies": [
+      "off",
+      { "devDependencies": true, "path": ["src/**/*"] }
+    ]
   },
   "parserOptions": {
     "project": "./tsconfig.json"

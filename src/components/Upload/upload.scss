@@ -1,0 +1,74 @@
+.es-upload {
+  input {
+    display: none;
+  }
+
+  &-input {
+    display: inline-block;
+  }
+
+  &-name {
+    width: 100%;
+    line-height: $line-height-base;
+  }
+
+  &-files {
+    list-style: none;
+    padding: 0;
+
+    &-icon {
+      padding-right: 0.5rem;
+    }
+
+    &-item {
+      position: relative;
+      color: $secondary-text;
+      font-size: $upload-item-font-size;
+      border-radius: $upload-item-radius;
+      background-color: $gray-100;
+      padding: $upload-item-padding;
+      margin-bottom: 0.3rem;
+
+      &:hover {
+        background-color: $gray-200;
+
+        .file-status {
+          display: none;
+        }
+        .file-action {
+          display: inline;
+        }
+      }
+    }
+  }
+
+  &-error {
+    color: $danger;
+  }
+
+  .file-status {
+    position: absolute;
+    right: 1rem;
+    top: 0.7rem;
+  }
+
+  .file-action {
+    position: absolute;
+    right: 1rem;
+    top: 0.7rem;
+    display: none;
+    cursor: pointer;
+  }
+}
+
+.es-dragger {
+  border: 2px dashed $gray-500;
+  padding: 1rem;
+  width: 300px;
+  height: 180px;
+  text-align: center;
+
+  &.is-drag-over {
+    border-color: $primary;
+  }
+}

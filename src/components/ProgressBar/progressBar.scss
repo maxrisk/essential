@@ -1,0 +1,33 @@
+.es-progress-bar {
+  height: $progress-bar-height;
+  border-radius: $progress-bar-radius;
+  background-color: $gray-200;
+
+  &-outer {
+    position: relative;
+  }
+
+  &-inner {
+    height: $progress-bar-height;
+    line-height: $progress-bar-height;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 4px;
+    color: $white;
+    font-size: 0.8rem;
+    text-align: right;
+    transition: $progress-bar-transition;
+
+    & > span {
+      margin: 0 10px;
+    }
+  }
+
+  @each $key, $val in $theme-colors {
+    .color-#{$key} {
+      background-color: $val;
+    }
+  }
+}

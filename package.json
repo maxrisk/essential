@@ -15,6 +15,7 @@
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",
     "@types/react-transition-group": "^4.4.6",
+    "axios": "^1.4.0",
     "classnames": "^2.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -70,5 +71,10 @@
     "sass": "^1.62.1",
     "storybook": "^7.0.18",
     "webpack": "^5.85.0"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "axios": "axios/dist/node/axios.cjs"
+    }
   }
 }
